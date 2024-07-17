@@ -1,13 +1,13 @@
+import { FC } from 'react'
 import './App.scss'
+import FlashCard from "./components/FlashCard.tsx"
 
-function App() {
+const App: FC = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold text-center">
-        Welcome to Thai Flash!
-      </h1>
+      <FlashCard />
     </div>
   )
 }
 
-export default App
+export default App;

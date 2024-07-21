@@ -17,25 +17,27 @@ const FlashCard: FC = () => {
   }, []);
 
   return (
-    <div className="flash-card text-center">
-      <div className="card-body">
-        <h2 className="text-9xl font-bold">{letter.thai}</h2>
-        { pronunciation
-          ?
-          <div className="pronunciation">
-            <div className="text-3xl font-bold py-2">{letter.burmese}</div>
-            <div className="text-3xl font-bold py-2">{letter.english}</div>
-          </div>
-          :
-          <button className="rounded-md bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg my-3 px-10 py-2"
-                  onClick={() => setPronunciation(true)}>See Pronunciation</button>
-        }
-        <div className="audio flex justify-center py-2">
+    <div className="flash-card text-center flex flex-col justify-between h-screen">
+      <div className="h-full">
+        <h2 className="font-bold h-2/4">{letter.thai}</h2>
+        <div className="flex justify-center items-center h-1/4">
+          { pronunciation
+            ?
+            <div className="pronunciation">
+              <div className="text-3xl font-bold py-3">{letter.burmese}</div>
+              <div className="text-3xl font-bold py-3">{letter.english}</div>
+            </div>
+            :
+            <button className="rounded-sm bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
+                    onClick={() => setPronunciation(true)}>See Pronunciation</button>
+          }
+        </div>
+        <div className="audio flex justify-center h-1/4">
           <AudioButton />
         </div>
       </div>
-      <div className="card-footer">
-        <button className="rounded-md bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-3 px-10 py-2"
+      <div>
+        <button className="rounded-sm bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-3 px-10 py-2"
                 onClick={getRandom}>Next
         </button>
       </div>

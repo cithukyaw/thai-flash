@@ -3,12 +3,8 @@ body {
     padding: 0;
 
     .flash-card {
-        height: 100vh;
-
-        .card-footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        h2 {
+            font-size: 20em;
         }
     }
 }

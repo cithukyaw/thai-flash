@@ -18,5 +18,200 @@
     "thai": "ฆ",
     "burmese": "ခေါရခန်း(င်)",
     "english": "khor-ra-khang"
+  },
+  {
+    "thai": "ง",
+    "burmese": "ငေါငူ",
+    "english": "ngo-ngu"
+  },
+  {
+    "thai": "จ",
+    "burmese": "ကျောကျန်",
+    "english": "cho-chan"
+  },
+  {
+    "thai": "ฉ",
+    "burmese": "ချောချဥ်(င်)",
+    "english": "chor-ching"
+  },
+  {
+    "thai": "ช",
+    "burmese": "ချောချန်(င်)",
+    "english": "chor-chang"
+  },
+  {
+    "thai": "ซ",
+    "burmese": "စော်စိုး",
+    "english": "sor-soo"
+  },
+  {
+    "thai": "ฌ",
+    "burmese": "ချော်ချူ",
+    "english": "chor-choe"
+  },
+  {
+    "thai": "ญ",
+    "burmese": "ရော်ရင်(င်)",
+    "english": "yor-yin"
+  },
+  {
+    "thai": "ฎ",
+    "burmese": "ဒေါ်ချဒါး",
+    "english": "dor-cha-daa"
+  },
+  {
+    "thai": "ฏ",
+    "burmese": "သော်ပသ",
+    "english": "thor-pa-tak"
+  },
+  {
+    "thai": "ฐ",
+    "burmese": "ထော်ထန်",
+    "english": "thor-taan"
+  },
+  {
+    "thai": "ฑ",
+    "burmese": "ထော်မွန်ထို",
+    "english": "toor-mon-tao"
+  },
+  {
+    "thai": "ฒ",
+    "burmese": "ထော်ဖူးထောင်း",
+    "english": "toor-phu-thao"
+  },
+  {
+    "thai": "ฒ",
+    "burmese": "ထော်ဖူးထောင်း",
+    "english": "toor-phu-thao"
+  },
+  {
+    "thai": "ณ",
+    "burmese": "နော်နင်",
+    "english": "nor-nin"
+  },
+  {
+    "thai": "ด",
+    "burmese": "ဒေါဒစ်",
+    "english": "dor-dek"
+  },
+  {
+    "thai": "ต",
+    "burmese": "သော်သောင်",
+    "english": "tor-tao"
+  },
+  {
+    "thai": "ถ",
+    "burmese": "ထောထူ(င်)",
+    "english": "tho-thung"
+  },
+  {
+    "thai": "ท",
+    "burmese": "ထောထဟန်",
+    "english": "thor-tha-haan"
+  },
+  {
+    "thai": "ธ",
+    "burmese": "ထောထုံ(င်)",
+    "english": "thor-thong"
+  },
+  {
+    "thai": "น",
+    "burmese": "နောနူ",
+    "english": "nor-nuu"
+  },
+  {
+    "thai": "บ",
+    "burmese": "ဘောဘီမိုင်း",
+    "english": "bor-bai-mai"
+  },
+  {
+    "thai": "ป",
+    "burmese": "ပေါ်ပလာ",
+    "english": "por-plaa"
+  },
+  {
+    "thai": "ผ",
+    "burmese": "ဖော်ဖရ်(င်း)",
+    "english": "por-phueng"
+  },
+  {
+    "thai": "ฝ",
+    "burmese": "ဖော်ဖာ",
+    "english": "for-faa"
+  },
+  {
+    "thai": "พ",
+    "burmese": "ဖော်ဖန်(င်)",
+    "english": "por-phan"
+  },
+  {
+    "thai": "ฟ",
+    "burmese": "ဖော်ဖန်(င်)",
+    "english": "for-fan"
+  },
+  {
+    "thai": "ภ",
+    "burmese": "ဖော်ဆန်ဖောင်း(ဝ်)",
+    "english": "por-sam-phao"
+  },
+  {
+    "thai": "ม",
+    "burmese": "မော်မ",
+    "english": "mor-ma"
+  },
+  {
+    "thai": "ย",
+    "burmese": "ယော်ယက်",
+    "english": "yor-yak"
+  },
+  {
+    "thai": "ร",
+    "burmese": "ရော်ရူအာ",
+    "english": "ror-ruea"
+  },
+  {
+    "thai": "ล",
+    "burmese": "လော်လင်",
+    "english": "lor-ling"
+  },
+  {
+    "thai": "ว",
+    "burmese": "ဝေါဝမ်(င်)",
+    "english": "wor-waen"
+  },
+  {
+    "thai": "ศ",
+    "burmese": "စော်စာလား",
+    "english": "sor-saa-laa"
+  },
+  {
+    "thai": "ษ",
+    "burmese": "စော်ရူးစီ",
+    "english": "sor-rue-sii"
+  },
+  {
+    "thai": "ส",
+    "burmese": "စော်စူအာ",
+    "english": "sor-suea"
+  },
+  {
+    "thai": "ห",
+    "burmese": "ဟော်ဟိ",
+    "english": "hor-hiip"
+  },
+  {
+    "thai": "ฬ",
+    "burmese": "လော်တူလား",
+    "english": "lor-tuu-laa"
+  },
+  {
+    "thai": "อ",
+    "burmese": "အောအန်(င်)",
+    "english": "or-ang"
+  },
+  {
+    "thai": "ฮ",
+    "burmese": "ဟော်နော့ဟူး",
+    "english": "hor-nok-huuk"
   }
 ]

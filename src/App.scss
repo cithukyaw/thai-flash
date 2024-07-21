@@ -1,11 +1,41 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    .my {
+        font-family: "Noto Sans Myanmar", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .my-bold {
+        font-family: "Noto Sans Myanmar", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .th-bold {
+        font-family: "Noto Serif Thai", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    }
 
     .flash-card {
         h2 {
             font-size: 20em;
-            line-height: 100%;
+            line-height: 1.3em;
+        }
+
+        .audio {
+            svg {
+                cursor: pointer;
+            }
         }
     }
 }

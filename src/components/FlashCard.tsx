@@ -4,11 +4,17 @@ import AudioButton from "./AudioButton.tsx";
 
 const FlashCard: FC = () => {
   const [letter, setLetter] = useState<Letter>(consonants[0])
+  const [lastKey, setLastKey] = useState(0)
   const [pronunciation, setPronunciation] = useState(false)
 
   const getRandom = () => {
-    const key: number = Math.floor((Math.random() * consonants.length))
+    let key: number;
+    do {
+      key = Math.floor((Math.random() * consonants.length))
+    } while (key == lastKey)
+
     setLetter(consonants[key])
+    setLastKey(key)
     setPronunciation(false);
   }
 

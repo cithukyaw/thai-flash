@@ -37,7 +37,7 @@ const FlashCard: FC = () => {
         </div>
       </div>
       <div>
-        <button className="rounded-sm bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-3 px-10 py-2"
+        <button className="rounded-sm bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-5 px-10 py-2"
                 onClick={getRandom}>Next
         </button>
       </div>

@@ -1,4 +1,4 @@
-import consonants from "../../data/thai/consonants.json";
+import consonants from "../../data/th/consonants.json";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 const initialState: CardState = {

@@ -1,4 +1,4 @@
-import consonants from '../data/thai/consonants.json'
+import consonants from '../data/th/consonants.json'
 import {FC, useEffect} from "react"
 import AudioButton from "./AudioButton.tsx";
 import {AppDispatch, RootState} from "../state/store.ts";

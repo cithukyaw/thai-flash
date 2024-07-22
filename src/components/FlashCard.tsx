@@ -1,11 +1,13 @@
 import consonants from '../data/thai/consonants.json'
-import {FC, useEffect, useState} from "react"
+import {FC, useEffect} from "react"
 import AudioButton from "./AudioButton.tsx";
+import {AppDispatch, RootState} from "../state/store.ts";
+import {useDispatch, useSelector} from "react-redux";
+import {setLastKey, setLetter, setPronunciation} from "../state/slices/cardSlice.ts";
 
 const FlashCard: FC = () => {
-  const [letter, setLetter] = useState<Letter>(consonants[0])
-  const [lastKey, setLastKey] = useState(0)
-  const [pronunciation, setPronunciation] = useState(false)
+  const {letter, lastKey, pronunciation} = useSelector((state: RootState) => state.card)
+  const dispatch = useDispatch<AppDispatch>();
 
   const getRandom = () => {
     let key: number;
@@ -13,9 +15,9 @@ const FlashCard: FC = () => {
       key = Math.floor((Math.random() * consonants.length))
     } while (key == lastKey)
 
-    setLetter(consonants[key])
-    setLastKey(key)
-    setPronunciation(false);
+    dispatch(setLetter(consonants[key]))
+    dispatch(setLastKey(key))
+    dispatch(setPronunciation(false))
   }
 
   useEffect(() => {
@@ -35,7 +37,7 @@ const FlashCard: FC = () => {
             </div>
             :
             <button className="rounded-sm bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
-                    onClick={() => setPronunciation(true)}>See Pronunciation</button>
+                    onClick={() => dispatch(setPronunciation(true))}>See Pronunciation</button>
           }
         </div>
         <div className="audio flex justify-center h-1/4">

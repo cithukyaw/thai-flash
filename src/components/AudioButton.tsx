@@ -1,18 +1,22 @@
-import {FC, useState} from "react";
+import {FC} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../state/store.ts";
+import {setPlaying} from "../state/slices/cardSlice.ts";
 
 const AudioButton: FC = () => {
-  const [playing, setPlaying] = useState(false);
+  const playing = useSelector((state: RootState) => state.card.playing);
+  const dispatch = useDispatch<AppDispatch>();
 
   const playAudio = () => {
-    setPlaying(true)
+    dispatch(setPlaying(true))
 
     setTimeout(() => {
-      setPlaying(false)
+      dispatch(setPlaying(false))
     }, 1000)
   };
 
   const stopAudio = () => {
-    setPlaying(false)
+    dispatch(setPlaying(false))
   }
 
   return (

@@ -4,15 +4,26 @@ import {AppDispatch, RootState} from "../state/store.ts";
 import {setPlaying} from "../state/slices/cardSlice.ts";
 
 const AudioButton: FC = () => {
-  const playing = useSelector((state: RootState) => state.card.playing);
+  const {letter, playing} = useSelector((state: RootState) => state.card);
   const dispatch = useDispatch<AppDispatch>();
 
-  const playAudio = () => {
-    dispatch(setPlaying(true))
+  const playAudio = async () => {
+    try {
+      const fileName = letter.english;
+      const sound = new Audio(`./assets/audio/th/consonants/${fileName}.mp3`);
 
-    setTimeout(() => {
-      dispatch(setPlaying(false))
-    }, 1000)
+      dispatch(setPlaying(true))
+      sound.play().then(() => {
+        console.log(`Playing ${fileName} successfully`);
+      }).catch(e => {
+        console.error(`Error occurred while playing ${fileName}:`, e);
+        alert('Audio will be available soon.');
+      }).finally(() => {
+        dispatch(setPlaying(false))
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const stopAudio = () => {

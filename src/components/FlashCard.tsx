@@ -27,20 +27,20 @@ const FlashCard: FC = () => {
   return (
     <div className="flash-card text-center flex flex-col justify-between h-dvh">
       <div className="h-full">
-        <h2 className="font-bold h-2/4 th-bold">{letter.thai}</h2>
-        <div className="flex justify-center items-center h-1/4">
+        <h2 className="font-bold h-3/5 th-bold">{letter.thai}</h2>
+        <div className="flex justify-center items-center h-1/5">
           { pronunciation
             ?
             <div className="pronunciation">
-              <div className="text-3xl font-bold py-3 my-bold">{letter.burmese}</div>
-              <div className="text-3xl font-bold py-3">{letter.english}</div>
+              <div className="text-3xl font-bold py-2 my-bold">{letter.burmese}</div>
+              <div className="text-3xl font-bold py-2">{letter.english}</div>
             </div>
             :
             <button className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
                     onClick={() => dispatch(setPronunciation(true))}>See Pronunciation</button>
           }
         </div>
-        <div className="audio flex justify-center h-1/4">
+        <div className="audio flex justify-center h-1/5">
           <AudioButton />
         </div>
       </div>

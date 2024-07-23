@@ -36,7 +36,7 @@ const FlashCard: FC = () => {
               <div className="text-3xl font-bold py-3">{letter.english}</div>
             </div>
             :
-            <button className="rounded-sm bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
+            <button className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
                     onClick={() => dispatch(setPronunciation(true))}>See Pronunciation</button>
           }
         </div>
@@ -45,7 +45,7 @@ const FlashCard: FC = () => {
         </div>
       </div>
       <div>
-        <button className="rounded-sm bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-5 px-10 py-2"
+        <button className="rounded-full bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-5 px-10 py-2"
                 onClick={getRandom}>Next
         </button>
       </div>

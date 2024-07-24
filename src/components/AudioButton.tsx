@@ -2,6 +2,7 @@ import {FC} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../state/store.ts";
 import {setPlaying} from "../state/slices/cardSlice.ts";
+import {toast} from "react-toastify";
 
 const AudioButton: FC = () => {
   const {letter, playing} = useSelector((state: RootState) => state.card);
@@ -17,7 +18,7 @@ const AudioButton: FC = () => {
         console.log(`Playing ${fileName} successfully`);
       }).catch(e => {
         console.error(`Error occurred while playing ${fileName}:`, e);
-        alert('Audio will be available soon.');
+        toast.error('Audio will be available soon.');
       }).finally(() => {
         dispatch(setPlaying(false))
       });

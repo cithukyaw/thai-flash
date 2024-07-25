@@ -9,34 +9,32 @@ const AudioButton: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const playAudio = async () => {
-    try {
-      const fileName = letter.english;
-      const sound = new Audio(`./assets/audio/th/consonants/${fileName}.mp3`);
-
+    if (!playing) {
       dispatch(setPlaying(true))
+
+      const fileName = `${letter.english}.mp3`;
+      const sound = new Audio(`./assets/audio/th/consonants/${fileName}`);
+
       sound.play().then(() => {
         console.log(`Playing ${fileName} successfully`);
       }).catch(e => {
         console.error(`Error occurred while playing ${fileName}:`, e);
         toast.error('Audio will be available soon.');
-      }).finally(() => {
+      });
+
+      // Add an event listener for the 'ended' event
+      sound.addEventListener('ended', () => {
         dispatch(setPlaying(false))
       });
-    } catch (error) {
-      console.error(error);
     }
   };
-
-  const stopAudio = () => {
-    dispatch(setPlaying(false))
-  }
 
   return (
     <>
       {
         playing ?
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-               className="size-12 border border-gray-400 rounded-md p-2" onClick={stopAudio}>
+               className="size-12 border border-gray-400 rounded-md p-2" onClick={playAudio}>
             <path
               d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z"/>
             <path

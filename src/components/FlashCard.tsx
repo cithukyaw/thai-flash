@@ -25,9 +25,9 @@ const FlashCard: FC = () => {
   }, []);
 
   return (
-    <div className="flash-card text-center flex flex-col justify-between h-dvh">
+    <div className="flash-card text-center flex flex-col justify-between">
       <div className="h-full">
-        <h2 className="font-bold h-3/5 th-bold">{letter.thai}</h2>
+        <h2 className={`font-bold h-3/5 th-bold ${letter.english}`}>{letter.thai}</h2>
         <div className="flex justify-center items-center h-1/5">
           { pronunciation
             ?

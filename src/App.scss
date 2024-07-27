@@ -27,9 +27,19 @@ body {
     }
 
     .flash-card {
+        height: calc(100vh - (34px + 1rem));
+        overflow: hidden;
+
         h2 {
             font-size: 18em;
-            line-height: 1.25em;
+            line-height: 1.2em;
+
+            &.dor-cha-daa,
+            &.yor-yin,
+            &.thor-pa-tak,
+            &.thor-taan {
+                line-height: .9em;
+            }
         }
 
         .audio {

@@ -1,21 +1,24 @@
 import consonants from '../data/th/consonants.json'
+import vowels from '../data/th/vowels.json'
 import {FC, useEffect} from "react"
 import AudioButton from "./AudioButton.tsx";
 import {AppDispatch, RootState} from "../state/store.ts";
 import {useDispatch, useSelector} from "react-redux";
-import {setLastKey, setLetter, setPronunciation} from "../state/slices/cardSlice.ts";
+import {setCategory, setLastKey, setLetter, setPronunciation} from "../state/slices/cardSlice.ts";
 
-const FlashCard: FC = () => {
+const FlashCard: FC<FlashCardProps> = ({ category }) => {
   const {letter, lastKey, pronunciation} = useSelector((state: RootState) => state.card)
   const dispatch = useDispatch<AppDispatch>();
+  const letters = category === 'consonant' ? consonants : vowels;
 
   const getRandom = () => {
     let key: number;
     do {
-      key = Math.floor((Math.random() * consonants.length))
+      key = Math.floor((Math.random() * letters.length))
     } while (key == lastKey)
 
-    dispatch(setLetter(consonants[key]))
+    dispatch(setCategory(category))
+    dispatch(setLetter(letters[key]))
     dispatch(setLastKey(key))
     dispatch(setPronunciation(false))
   }
@@ -27,13 +30,13 @@ const FlashCard: FC = () => {
   return (
     <div className="flash-card text-center flex flex-col justify-between">
       <div className="h-full">
-        <h2 className={`font-bold h-3/5 th-bold ${letter.english}`}>{letter.thai}</h2>
+        <h2 className={`font-bold h-3/5 th-bold ${category} ${letter?.english}`}>{letter?.thai}</h2>
         <div className="flex justify-center items-center h-1/5">
-          { pronunciation
+          {pronunciation
             ?
             <div className="pronunciation">
-              <div className="text-3xl font-bold py-2 my-bold">{letter.burmese}</div>
-              <div className="text-3xl font-bold py-2">{letter.english}</div>
+              <div className="text-3xl font-bold py-2 my-bold">{letter?.burmese}</div>
+              <div className="text-3xl font-bold py-2">{letter?.english}</div>
             </div>
             :
             <button className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
@@ -41,7 +44,7 @@ const FlashCard: FC = () => {
           }
         </div>
         <div className="audio flex justify-center h-1/5">
-          <AudioButton />
+          <AudioButton/>
         </div>
       </div>
       <div>

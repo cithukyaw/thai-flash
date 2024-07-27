@@ -1,15 +1,10 @@
 import {FC} from "react";
 import viteLogo from '/vite.svg'
 import "./Start.scss";
-import {toast} from "react-toastify";
 import {NavLink} from "react-router-dom";
 
 const Start: FC = () => {
   const siteName = 'ThaiFlash';
-
-  const notify = () => {
-    toast.error("Coming Soon!")
-  }
 
   return (
     <div className="container mx-auto px-4 text-center flex flex-col h-dvh">
@@ -28,7 +23,7 @@ const Start: FC = () => {
             Consonants
           </NavLink>
           <NavLink
-            to="/vowel" onClick={notify}
+            to="/vowel"
             className="rounded-full border border-gray-400 bg-white hover:bg-black hover:text-white font-bold text-2xl py-3  my-3 block">
             Vowels
           </NavLink>

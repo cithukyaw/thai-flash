@@ -5,21 +5,23 @@ import {setPlaying} from "../state/slices/cardSlice.ts";
 import {toast} from "react-toastify";
 
 const AudioButton: FC = () => {
-  const {letter, playing} = useSelector((state: RootState) => state.card);
+  const {letter, category, playing} = useSelector((state: RootState) => state.card);
   const dispatch = useDispatch<AppDispatch>();
 
   const playAudio = async () => {
     if (!playing) {
       dispatch(setPlaying(true))
 
-      const fileName = `${letter.english}.mp3`;
-      const sound = new Audio(`./assets/audio/th/consonants/${fileName}`);
+      const name = letter?.english.split(' ').slice(-1)
+      const fileName = `${name}.mp3`;
+      const sound = new Audio(`./assets/audio/th/${category}s/${fileName}`);
 
       sound.play().then(() => {
         console.log(`Playing ${fileName} successfully`);
       }).catch(e => {
         console.error(`Error occurred while playing ${fileName}:`, e);
         toast.error('Audio will be available soon.');
+        dispatch(setPlaying(false))
       });
 
       // Add an event listener for the 'ended' event

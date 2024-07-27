@@ -1,17 +1,22 @@
+declare module "*.json" {
+  const value: Letter[];
+  export default value;
+}
+
 type Letter = {
   thai: string,
   burmese: string,
   english: string
 }
 
-declare module "*.json" {
-  const value: Letter[];
-  export default value;
-}
-
 interface CardState {
-  letter: Letter;
+  letter: Letter | null;
+  category: string;
   lastKey: number;
   pronunciation: boolean;
   playing: boolean;
+}
+
+interface FlashCardProps {
+  category: 'consonant' | 'vowel'
 }

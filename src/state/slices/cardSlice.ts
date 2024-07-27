@@ -1,8 +1,8 @@
-import consonants from "../../data/th/consonants.json";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 const initialState: CardState = {
-  letter: consonants[0],
+  letter: null,
+  category: '',
   lastKey: 0,
   pronunciation : false,
   playing: false,
@@ -14,6 +14,9 @@ const cardSlice = createSlice({
   reducers: {
     setLetter: (state, action: PayloadAction<Letter>) => {
       state.letter = action.payload;
+    },
+    setCategory: (state, action: PayloadAction<string>) => {
+      state.category = action.payload;
     },
     setLastKey: (state, action: PayloadAction<number>) => {
       state.lastKey = action.payload;
@@ -29,6 +32,7 @@ const cardSlice = createSlice({
 
 export const {
   setLetter,
+  setCategory,
   setLastKey,
   setPronunciation,
   setPlaying

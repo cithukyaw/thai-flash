@@ -32,10 +32,10 @@ body {
 
         h2 {
             font-size: 18em;
-            line-height: 1.2em; /* normal */
+            line-height: 1.4em; /* normal */
 
             &.vowel {
-                font-size: 16em;
+                font-size: 14em;
             }
 
             &.dor-cha-daa,
@@ -49,12 +49,23 @@ body {
             &.vowel.ii,
             &.vowel.ue,
             &.vowel.uee {
-                line-height: 1.35em; /* slightly moved down from normal */
+                line-height: 1.6em; /* slightly moved down from normal */
             }
 
             &.vowel.u,
             &.vowel.uu {
                 line-height: 1em; /* slightly moved up from normal */
+            }
+
+            &.vowel.eh,
+            &.vowel.ae {
+                font-size: 10em;
+                line-height: 1.8em; /* slightly moved down from normal */
+            }
+
+            &.vowel.eh {
+                font-size: 13em;
+                line-height: 1.5em; /* slightly moved up from normal */
             }
         }
 

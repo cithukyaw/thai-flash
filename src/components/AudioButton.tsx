@@ -3,16 +3,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../state/store.ts";
 import {setPlaying} from "../state/slices/cardSlice.ts";
 import {toast} from "react-toastify";
+import {getCleanName} from "../utils/common.ts";
 
 const AudioButton: FC = () => {
   const {letter, category, playing} = useSelector((state: RootState) => state.card);
   const dispatch = useDispatch<AppDispatch>();
 
   const playAudio = async () => {
-    if (!playing) {
+    if (!playing && letter !== null) {
       dispatch(setPlaying(true))
 
-      const name = letter?.english.split(' ').slice(-1)
+      const name = getCleanName(letter.english)
       const fileName = `${name}.mp3`;
       const sound = new Audio(`./assets/audio/th/${category}s/${fileName}`);
 

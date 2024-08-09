@@ -61,14 +61,16 @@ body {
             &.vowel.ae,
             &.vowel.oh,
             &.vowel.oe,
-            &.vowel.ia {
+            &.vowel.ia,
+            &.vowel.uea {
                 font-size: 9.7em;
                 line-height: 1.8em; /* slightly moved down from normal */
             }
 
             &.vowel.eh,
             &.vowel.oee,
-            &.vowel.iia {
+            &.vowel.iia,
+            &.vowel.uuwa {
                 font-size: 13em;
                 line-height: 1.5em; /* slightly moved up from normal */
             }
@@ -82,7 +84,9 @@ body {
                 line-height: 2.2em;
             }
 
-            &.vowel.oh {
+            &.vowel.oh,
+            &.vowel.ueea,
+            &.vowel.uwa {
                 font-size: 12em;
                 line-height: 1.9em;
             }

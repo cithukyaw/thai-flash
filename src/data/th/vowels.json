@@ -91,12 +91,32 @@
   },
   {
     "thai": "เอียะ",
-    "burmese": "(ဆာရာ) အိယ",
+    "burmese": "(ဆာရာ) အိယက်",
     "english": "(Sara) ia"
   },
   {
     "thai": "เอีย",
-    "burmese": "(ဆာရာ) အိယား",
+    "burmese": "(ဆာရာ) အိယဲ",
     "english": "(Sara) iia"
+  },
+  {
+    "thai": "เอือะ",
+    "burmese": "(ဆာရာ) အုအ",
+    "english": "(Sara) uea"
+  },
+  {
+    "thai": "เอือ",
+    "burmese": "(ဆာရာ) အူးအာ",
+    "english": "(Sara) ueea"
+  },
+  {
+    "thai": "อัวะ",
+    "burmese": "(ဆာရာ) ဦးဝ",
+    "english": "(Sara) uwa"
+  },
+  {
+    "thai": "อัว",
+    "burmese": "(ဆာရာ) ဦးဝါ",
+    "english": "(Sara) uuwa"
   }
 ]

@@ -6,6 +6,7 @@ import {AppDispatch, RootState} from "../state/store.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {setCategory, setLastKey, setLetter, setPronunciation} from "../state/slices/cardSlice.ts";
 import {getCleanName} from "../utils/common.ts";
+import {useSwipeable} from "react-swipeable";
 
 const FlashCard: FC<FlashCardProps> = ({ category }) => {
   const {letter, lastKey, pronunciation} = useSelector((state: RootState) => state.card)
@@ -28,12 +29,16 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
     getRandom();
   }, []);
 
+  const swipeHandler = useSwipeable({
+    onSwiped: () => getRandom()
+  });
+
   if (letter === null) {
     return <div className="text-center">Loading...</div>
   }
 
   return (
-    <div className="flash-card text-center flex flex-col justify-between">
+    <div className="flash-card text-center flex flex-col justify-between" {...swipeHandler}>
       <div className="h-full">
         <h2 className={`font-bold h-3/5 th-bold ${category} ${getCleanName(letter.english)}`}>{letter.thai}</h2>
         <div className="flex justify-center items-center h-1/5">

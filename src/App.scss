@@ -70,6 +70,7 @@ body {
             &.vowel.eh,
             &.vowel.oee,
             &.vowel.iia,
+            &.vowel.ohh,
             &.vowel.uuwa {
                 font-size: 13em;
                 line-height: 1.5em; /* slightly moved up from normal */
@@ -86,7 +87,9 @@ body {
 
             &.vowel.oh,
             &.vowel.ueea,
-            &.vowel.uwa {
+            &.vowel.uwa,
+            &.vowel.ai-mai-malai,
+            &.vowel.ai-mai-muan {
                 font-size: 12em;
                 line-height: 1.9em;
             }

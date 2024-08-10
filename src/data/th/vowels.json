@@ -10,6 +10,11 @@
     "english": "(Sara) aah"
   },
   {
+    "thai": "อำ",
+    "burmese": "အမ်းမ်",
+    "english": "am"
+  },
+  {
     "thai": "อิ",
     "burmese": "(ဆာရာ) အိ",
     "english": "(Sara) i"
@@ -118,5 +123,35 @@
     "thai": "อัว",
     "burmese": "(ဆာရာ) ဦးဝါ",
     "english": "(Sara) uuwa"
+  },
+  {
+    "thai": "ฤ",
+    "burmese": "ရု",
+    "english": "rue"
+  },
+  {
+    "thai": "ฤา",
+    "burmese": "ရူး",
+    "english": "ruue"
+  },
+  {
+    "thai": "ฦ",
+    "burmese": "လု",
+    "english": "lue"
+  },
+  {
+    "thai": "ฦา",
+    "burmese": "လူး",
+    "english": "luue"
+  },
+  {
+    "thai": "ไ",
+    "burmese": "(ဆာရာ) အိုင်းမိုင်းမလိုင်",
+    "english": "(Sara) ai-mai-malai"
+  },
+  {
+    "thai": "ใ",
+    "burmese": "(ဆာရာ) အိုင်းမိုင်းမွမ်",
+    "english": "(Sara) ai-mai-muan"
   }
 ]

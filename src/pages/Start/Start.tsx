@@ -1,5 +1,5 @@
 import {FC} from "react";
-import viteLogo from '/vite.svg'
+import logo from '/logo.png'
 import "./Start.scss";
 import {NavLink} from "react-router-dom";
 
@@ -10,7 +10,7 @@ const Start: FC = () => {
     <div className="container mx-auto px-4 text-center flex flex-col h-dvh">
       <div className="logo flex justify-center items-center h-2/3">
         <div>
-          <img src={viteLogo} alt=""/>
+          <img src={logo} alt=""/>
           <h1>{siteName}</h1>
         </div>
       </div>

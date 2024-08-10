@@ -48,7 +48,7 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
                     onClick={() => dispatch(setPronunciation(true))}>See Pronunciation</button>
           }
         </div>
-        <div className="audio flex justify-center h-1/5">
+        <div className="audio flex justify-center items-center h-1/5">
           <AudioButton/>
         </div>
       </div>

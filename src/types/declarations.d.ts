@@ -18,5 +18,5 @@ interface CardState {
 }
 
 interface FlashCardProps {
-  category: 'consonant' | 'vowel'
+  category: 'consonant' | 'vowel' | 'number'
 }

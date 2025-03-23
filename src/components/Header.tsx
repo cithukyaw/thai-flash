@@ -19,6 +19,8 @@ const Header: FC = () => {
         return "Consonant";
       case "/vowel":
         return "Vowel";
+      case "/number":
+        return "Number";
       default:
         return "ThaiFlash";
     }
@@ -86,6 +88,18 @@ const Header: FC = () => {
             onClick={closeMenu}
           >
             Vowel
+          </NavLink>
+          <NavLink
+            to="/number"
+            className={({ isActive }) =>
+              "rounded-full border border-gray-400 font-bold py-2 px-4 mb-2 " +
+              (isActive
+                ? "bg-black text-white"
+                : "bg-white hover:bg-black hover:text-white")
+            }
+            onClick={closeMenu}
+          >
+            Number
           </NavLink>
         </nav>
       </div>

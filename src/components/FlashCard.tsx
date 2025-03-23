@@ -1,5 +1,6 @@
 import consonants from '../data/th/consonants.json'
 import vowels from '../data/th/vowels.json'
+import numbers from '../data/th/numbers.json'
 import {FC, useEffect} from "react"
 import AudioButton from "./AudioButton.tsx";
 import {AppDispatch, RootState} from "../state/store.ts";
@@ -11,7 +12,18 @@ import {useSwipeable} from "react-swipeable";
 const FlashCard: FC<FlashCardProps> = ({ category }) => {
   const {letter, lastKey, pronunciation} = useSelector((state: RootState) => state.card)
   const dispatch = useDispatch<AppDispatch>();
-  const letters = category === 'consonant' ? consonants : vowels;
+
+  // Determine the current page title based on the route
+  const getLetters = (category: string) => {
+    switch (category) {
+      case 'vowel':
+        return vowels;
+      case 'number':
+        return numbers;
+      default:
+        return consonants;
+    }
+  };
 
   const getRandom = () => {
     let key: number;
@@ -24,6 +36,8 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
     dispatch(setLastKey(key))
     dispatch(setPronunciation(false))
   }
+
+  const letters = getLetters(category);
 
   useEffect(() => {
     getRandom();

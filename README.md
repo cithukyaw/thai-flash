@@ -4,6 +4,7 @@ A simple application to learn and memorize Thai letters - consonants and vowels 
 
 Tech Stack:
 - React + TypeScript + Vite
+- Redux
 - Tailwind CSS
 - Sass
 

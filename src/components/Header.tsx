@@ -20,7 +20,7 @@ const Header: FC = () => {
       case "/vowel":
         return "Vowel";
       default:
-        return "Thai Flash";
+        return "ThaiFlash";
     }
   };
 

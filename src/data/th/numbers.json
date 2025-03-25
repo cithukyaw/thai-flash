@@ -2,56 +2,67 @@
   {
     "thai": "๐",
     "burmese": "ဆုံ",
-    "english": "sǔun"
+    "english": "sǔun",
+    "meaning": "zero"
   },
   {
     "thai": "๑",
     "burmese": "နွန်",
-    "english": "nùeng"
+    "english": "nùeng",
+    "meaning": "one"
   },
   {
     "thai": "๒",
     "burmese": "ဆောင်",
-    "english": "soong"
+    "english": "soong",
+    "meaning": "two"
   },
   {
     "thai": "๓",
     "burmese": "ဆောင်",
-    "english": "sǎam"
+    "english": "sǎam",
+    "meaning": "three"
   },
   {
     "thai": "๔",
     "burmese": "စီး",
-    "english": "sìi"
+    "english": "sìi",
+    "meaning": "four"
   },
   {
     "thai": "๕",
     "burmese": "ဟား",
-    "english": "hâa"
+    "english": "hâa",
+    "meaning": "five"
   },
   {
     "thai": "๖",
     "burmese": "ဟွတ်",
-    "english": "hok"
+    "english": "hok",
+    "meaning": "six"
   },
   {
     "thai": "๗",
     "burmese": "ဂျက်",
-    "english": "jèt"
+    "english": "jèt",
+    "meaning": "seven"
   },
   {
     "thai": "๘",
     "burmese": "ဘတ်",
-    "english": "bpàaet"
+    "english": "bpàaet",
+    "meaning": "eight"
   },
   {
     "thai": "๙",
     "burmese": "ဂါ့ဝို့",
-    "english": "gâao"
+    "english": "gâao",
+    "meaning": "nine"
   },
   {
     "thai": "๑๐",
     "burmese": "စစ်ပ်",
-    "english": "sìp"
+    "english": "sìp",
+    "meaning": "ten"
   }
 ]

@@ -6,7 +6,8 @@ declare module "*.json" {
 type Letter = {
   thai: string,
   burmese: string,
-  english: string
+  english: string,
+  meaning?: string
 }
 
 interface CardState {

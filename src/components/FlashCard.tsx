@@ -55,6 +55,7 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
     <div className="flash-card text-center flex flex-col justify-between" {...swipeHandler}>
       <div className="h-full">
         <h2 className={`font-bold h-3/5 th-bold ${category} ${getCleanName(letter.english)}`}>{letter.thai}</h2>
+        { letter?.meaning && <div className="text-3xl">{letter.meaning}</div> }
         <div className="flex justify-center items-center h-1/5">
           {pronunciation
             ?

@@ -94,7 +94,7 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
               </div>
             ) : (
               <button
-                className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
+                className="rounded-full bg-yellow-400 hover:bg-yellow-500 font-bold text-lg px-10 py-2"
                 onClick={() => dispatch(setPronunciation(true))}
               >
                 See Pronunciation
@@ -108,7 +108,7 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
       </div>
       <div className="text-center">
         <button
-          className="rounded-full bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-4 px-10 py-2"
+          className="rounded-full bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold text-3xl my-4 px-10 py-2"
           onClick={getRandom}
         >
           Next

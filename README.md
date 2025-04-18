@@ -1,6 +1,6 @@
 # ThaiFlash
 
-A simple application to learn and memorize Thai letters - consonants and vowels as flashcard.
+A simple application to learn and memorize Thai letters - consonants, vowels and numbers as flashcard.
 
 Tech Stack:
 - React + TypeScript + Vite

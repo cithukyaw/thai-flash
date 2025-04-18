@@ -68,51 +68,53 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
   }
 
   return (
-    <div
-      className={`flash-card text-center flex flex-col justify-between transition-transform duration-300 ${
-        isSwiping
-          ? swipeDirection === 'left'
-            ? '-translate-x-full opacity-0' // Swipe left
-            : 'translate-x-full opacity-0' // Swipe right
-          : 'translate-x-0 opacity-100' // Default position
-      }`}
-      {...swipeHandler}
-    >
-      <div className="h-full">
-        <h2 className={`font-bold h-3/5 th-bold ${category} ${getCleanName(letter.english)}`}>
-          {letter.thai}
-        </h2>
-        {letter?.meaning && <div className="text-3xl">{letter.meaning}</div>}
-        <div className="flex justify-center items-center h-1/5">
-          {pronunciation ? (
-            <div className="pronunciation">
-              <div className="text-3xl font-bold py-2 my-bold">
-                {letter.burmese}
+    <>
+      <div
+        className={`flash-card text-center flex flex-col justify-between transition-transform duration-300 ${
+          isSwiping
+            ? swipeDirection === 'left'
+              ? '-translate-x-full opacity-0' // Swipe left
+              : 'translate-x-full opacity-0' // Swipe right
+            : 'translate-x-0 opacity-100' // Default position
+        }`}
+        {...swipeHandler}
+      >
+        <div className="h-full">
+          <h2 className={`font-bold h-3/5 th-bold ${category} ${getCleanName(letter.english)}`}>
+            {letter.thai}
+          </h2>
+          {letter?.meaning && <div className="text-3xl">{letter.meaning}</div>}
+          <div className="flex justify-center items-center h-1/5">
+            {pronunciation ? (
+              <div className="pronunciation">
+                <div className="text-3xl font-bold py-2 my-bold">
+                  {letter.burmese}
+                </div>
+                <div className="text-3xl font-bold py-2">{letter.english}</div>
               </div>
-              <div className="text-3xl font-bold py-2">{letter.english}</div>
-            </div>
-          ) : (
-            <button
-              className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
-              onClick={() => dispatch(setPronunciation(true))}
-            >
-              See Pronunciation
-            </button>
-          )}
-        </div>
-        <div className="audio flex justify-center items-center h-1/5">
-          <AudioButton/>
+            ) : (
+              <button
+                className="rounded-full bg-blue-700 hover:bg-blue-600 text-white font-bold text-lg px-10 py-2"
+                onClick={() => dispatch(setPronunciation(true))}
+              >
+                See Pronunciation
+              </button>
+            )}
+          </div>
+          <div className="audio flex justify-center items-center py-3">
+            <AudioButton/>
+          </div>
         </div>
       </div>
-      <div>
+      <div className="text-center">
         <button
-          className="rounded-full bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-5 px-10 py-2"
+          className="rounded-full bg-green-700 hover:bg-green-600 text-white font-bold text-3xl my-4 px-10 py-2"
           onClick={getRandom}
         >
           Next
         </button>
       </div>
-    </div>
+    </>
   )
 }
 

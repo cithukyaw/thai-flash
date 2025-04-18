@@ -54,14 +54,23 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
         setSwipeDirection('left'); // Swiping left
       }
 
-      setIsSwiping(true);
-      setTimeout(() => {
-        getRandom();
-        setIsSwiping(false);
-        setSwipeDirection(null); // Reset swipe direction
-      }, 100); // Match the CSS transition duration
+      changeCard();
     },
   });
+
+  const changeCard = () => {
+    setIsSwiping(true);
+    setTimeout(() => {
+      getRandom();
+      setIsSwiping(false);
+      setSwipeDirection(null); // Reset swipe direction
+    }, 100); // Match the CSS transition duration
+  }
+
+  const handleNext = () => {
+    setSwipeDirection('right');
+    changeCard();
+  }
 
   if (letter === null) {
     return <div className="text-center">Loading...</div>
@@ -109,7 +118,7 @@ const FlashCard: FC<FlashCardProps> = ({ category }) => {
       <div className="text-center">
         <button
           className="rounded-full bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold text-3xl my-4 px-10 py-2"
-          onClick={getRandom}
+          onClick={handleNext}
         >
           Next
         </button>
